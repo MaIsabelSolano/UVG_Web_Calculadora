@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+.btnGrid {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
+    height: 80%;
+}
+
+
+.container {
+    background-color: rgb(0, 0, 0);
+    height: 600px;
+    width: 400px;
+}
+
+.aplicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #000000;
+    margin: 0;
+}
+
+.disp {
+    height: 20%;
+    background-color: #202020;
+}
+
+.numeric {
+    background-color: #C7C7C7;
+}
+
+.upper {
+    background-color: #AFB0B5;
+}
+
+.operation {
+    background-color: #F98410;
+}
+
+.btnGrid button:hover {
+    opacity: .9;
+}
+
+.zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
