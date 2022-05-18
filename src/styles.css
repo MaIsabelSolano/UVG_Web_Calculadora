@@ -7,14 +7,13 @@
     height: 80%;
 }
 
-
-
-
 .container {
     background-color: rgb(0, 0, 0);
     height: 600px;
     width: 400px;
+    box-shadow: 0px 0px 0px 10px #000000;
 }
+
 
 .aplicacion {
     display: flex;
@@ -22,11 +21,11 @@
     align-items: center;
     min-height: 100vh;
     align-items: center;
-    
 }
 
 body {
-    background: #000000;
+    background: rgb(50, 103, 77);
+    box-shadow: inset 0px 0px 150px 90px rgb(31, 61, 55);
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -39,9 +38,10 @@ body {
     font-size: 80px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     font-stretch: condensed;
+    text-shadow: 0px 0px 7px white;
 }
 
 .btnGrid > button {
@@ -49,6 +49,8 @@ body {
     font-weight: lighter;
     font-stretch: semi-condensed;
     color: #161616c9;
+    border-radius: 100px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.459);
 }
 
 .numeric {
@@ -60,7 +62,7 @@ body {
 }
 
 .operation {
-    background-color: #F98410;
+    background-color: #17b424;
 }
 
 .btnGrid button:hover {
