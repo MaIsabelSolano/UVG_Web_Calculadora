@@ -1,4 +1,4 @@
-import Calculadora from "./Components/ButtonGrid"
+import Calculadora from "./Components/Calculadora"
 
 const App = () => {
     return (

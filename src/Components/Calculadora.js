@@ -10,9 +10,9 @@ const Calculadora = () => {
 
     useEffect(() => {
         if (primero) {
-            setDisplay(valor1)
+            checkDisplay(valor1)
         } else {
-            setDisplay(valor2)
+            checkDisplay(valor2)
         }
     })
 
@@ -34,8 +34,7 @@ const Calculadora = () => {
         if (primero){
             setPrimero(false)
             setOperacion(op)
-        }
-        else {
+        } else {
             const val1 = parseFloat(valor1)
             const val2 = parseFloat(valor2)
             let result = 0.0
@@ -83,13 +82,15 @@ const Calculadora = () => {
             setDisplay(disp)
         } else {
             // arreglar el display
-            setDisplay(disp)
+            const temp = parseFloat(disp)
+            const temp2 = temp.toExponential(4)
+            setDisplay(temp2)
         }
     }
 
     const mostrarResultado = () => {
         if (primero) {
-            setDisplay(valor1)
+            checkDisplay(valor1)
         } else {
             const val1 = parseFloat(valor1)
             const val2 = parseFloat(valor2)
