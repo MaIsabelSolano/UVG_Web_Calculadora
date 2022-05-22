@@ -1,37 +1,28 @@
 import { useState, useEffect } from 'react'
 
 const Calculadora = () => {
-
     const [valor1, setValor1] = useState('')
     const [valor2, setValor2] = useState('')
     const [primero, setPrimero] = useState(true)
     const [disp, setDisplay] = useState('0')
     const [operacion, setOperacion] = useState('')
 
-    useEffect(() => {
-        if (primero) {
-            checkDisplay(valor1)
-        } else {
-            checkDisplay(valor2)
-        }
-    })
-
     const addDigit = (digito) => {
         if (primero) {
             if (valor1.length < 9) {
-                let temp = valor1 + digito
+                const temp = valor1 + digito
                 setValor1(temp)
             }
         } else {
             if (valor2.length < 9) {
-                let temp = valor2 + digito
+                const temp = valor2 + digito
                 setValor2(temp)
             }
         }
     }
 
     const detOperacion = (op) => {
-        if (primero){
+        if (primero) {
             setPrimero(false)
             setOperacion(op)
         } else {
@@ -77,12 +68,12 @@ const Calculadora = () => {
         }
     }
 
-    const checkDisplay = (disp) => {
-        if (disp.length < 9) {
-            setDisplay(disp)
+    const checkDisplay = (l) => {
+        if (l.length < 9) {
+            setDisplay(l)
         } else {
             // arreglar el display
-            const temp = parseFloat(disp)
+            const temp = parseFloat(l)
             const temp2 = temp.toExponential(4)
             setDisplay(temp2)
         }
@@ -123,6 +114,14 @@ const Calculadora = () => {
         setOperacion('')
         setPrimero(true)
     }
+
+    useEffect(() => {
+        if (primero) {
+            checkDisplay(valor1)
+        } else {
+            checkDisplay(valor2)
+        }
+    })
 
     return (
         <div className="container">
