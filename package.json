@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/MaIsabelSolano/UVG_Web_Calculadora#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
     "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "eslint": "^8.15.0",
@@ -37,6 +39,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.0",
     "json-loader": "^0.5.7",
+    "react-test-renderer": "^18.1.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
@@ -45,5 +48,25 @@
   "dependencies": {
     "react": "18.1.0",
     "react-dom": "18.1.0"
+  },
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js"
+    }
   }
 }
